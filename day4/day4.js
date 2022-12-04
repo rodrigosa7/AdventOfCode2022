@@ -18,12 +18,9 @@ let count2 = 0;
 pairs.map((pair) => {
     const [n1, n2] = pair[0].split('-').map((string) => +string)
     const [n3, n4] = pair[1].split('-').map((string) => +string)
-    if (validatePairs(n1, n2, n3, n4)) {
-        count++
-    }
-    if (validatePairs2(n1, n2, n3, n4)) {
-        count2++
-    }
+
+    if (validatePairs(n1, n2, n3, n4)) count++
+    if (validatePairs2(n1, n2, n3, n4)) count2++
 })
 console.log("Pairs that one range fully contains another: ", count)
 console.log("Pairs that range overlaps: ", count2)
