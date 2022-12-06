@@ -3,9 +3,7 @@ const path = require('path');
 
 const dataStream = fs.readFileSync(path.join(__dirname, 'input.txt'), 'utf8')
 
-const checkDifferentChars = (input) => {
-    return /(.).*\1/.test(input);
-}
+const checkDifferentChars = (input) => /(.).*\1/.test(input);
 
 const validate = (input, size) => {
     let index = 0;
